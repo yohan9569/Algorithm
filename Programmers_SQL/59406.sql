@@ -1,0 +1,4 @@
+-- 동물 수 구하기
+
+SELECT SUM(1)
+FROM ANIMAL_INS;
