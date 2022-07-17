@@ -1,0 +1,10 @@
+-- 우유와 요거트가 담긴 장바구니
+-- 우유가 담긴 카트 SELECT 테이블과 요거트가 담긴 카트 SELECT 테이블 JOIN 
+
+SELECT M.CART_ID
+FROM 
+    (SELECT CART_ID FROM CART_PRODUCTS WHERE NAME = 'Milk') M
+    JOIN
+    (SELECT CART_ID FROM CART_PRODUCTS WHERE NAME = 'Yogurt') Y
+    ON M.CART_ID = Y.CART_ID
+ORDER BY M.CART_ID;
