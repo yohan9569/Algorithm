@@ -1,0 +1,31 @@
+-- 입양 시각 구하기(2) 
+-- 원본에서 hour만 뽑은 테이블과 0~23이 있는 테이블 join하고 groupby
+
+SELECT HOUR, IFNULL(count(H), 0) COUNT
+FROM (
+    SELECT HOUR(DATETIME) AS H
+    FROM ANIMAL_OUTS
+    ORDER BY 1
+	) AS O 
+	RIGHT JOIN (
+	WITH RECURSIVE cte AS (
+	SELECT 0 AS HOUR
+	UNION ALL
+	SELECT HOUR + 1 FROM cte WHERE HOUR < 23
+	)SELECT HOUR FROM cte
+	) AS J
+	ON O.H = J.HOUR
+GROUP BY HOUR
+ORDER BY HOUR;
+
+
+
+# 우수 코드 # 성능은 위가 더 좋을 것 같다.
+
+# SET @HOUR = -1;
+# SELECT (@HOUR := @HOUR +1) AS HOUR,
+#     (SELECT COUNT(HOUR(DATETIME)) 
+#     FROM ANIMAL_OUTS 
+#     WHERE HOUR(DATETIME)=@HOUR) AS COUNT 
+# FROM ANIMAL_OUTS
+# WHERE @HOUR < 23;
