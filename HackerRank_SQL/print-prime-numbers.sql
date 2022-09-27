@@ -1,0 +1,18 @@
+-- Print Prime Numbers
+
+WITH NUMBERS AS (
+    SELECT @num:=@num+1 AS NUMB
+    FROM information_schema.tables t1,
+        information_schema.tables t2,
+        (SELECT @num:=1) t3
+)
+
+SELECT GROUP_CONCAT(NUMB SEPARATOR '&')
+FROM NUMBERS
+WHERE NUMB <= 1000
+AND NUMB NOT IN (
+    SELECT N1.A * N2.B AS COMPOSITES
+    FROM (SELECT NUMB AS A FROM NUMBERS WHERE NUMB <= CEIL(SQRT(1000))) N1,
+        (SELECT NUMB AS B FROM NUMBERS WHERE NUMB <= 1000) N2
+    WHERE N1.A * N2.B <= 1000
+    GROUP BY COMPOSITES);
