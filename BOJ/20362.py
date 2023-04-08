@@ -9,8 +9,13 @@ ans = 0
 
 for _ in range(int(n)):
     x,y = input().split()
-    if x==s:
+    if x == s:
         break
-    d[y]+=1
+    d[y] += 1
 
 print(d[y])
+
+
+
+# another way - defaultdict 없이도 가능하다.
+d[y] = d.get(y,0) + 1
