@@ -1,4 +1,4 @@
-# boj 백준 10250번: ACM 호텔
+# 수학 / 브론즈 3 / ACM 호텔
 
 for _ in range(int(input())):
     h,w,n = map(int,input().split())
