@@ -1,5 +1,7 @@
-N = int(input())
+# 브루트포스 / 실버 4 / 한수
 
+
+N = int(input())
 n_han = 0
 
 for n in range(1,N+1):
