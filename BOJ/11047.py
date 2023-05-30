@@ -1,5 +1,4 @@
-# boj greedy 11047 동전 0
-# 리스트 뒤부터 for
+# 그리디 / 실버 4 / 동전 0
 
 
 n,k = map(int,input().split())
