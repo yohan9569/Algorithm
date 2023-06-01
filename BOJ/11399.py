@@ -1,4 +1,4 @@
-# boj greedy 11399번 ATM
+# 그리디 / 실버 4 / ATM
 
 from functools import reduce
 
