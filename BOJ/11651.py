@@ -1,4 +1,4 @@
-# boj 백준 정렬 11651번 좌표 정렬하기 2
+# 정렬 / 실버 5 / 좌표 정렬하기 2
 
 from operator import itemgetter
 
