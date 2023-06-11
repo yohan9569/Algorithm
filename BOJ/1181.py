@@ -1,4 +1,4 @@
-# 백준 정렬 1181번 단어 정렬
+# 정렬, 문자열 / 실버 5 / 단어 정렬
 
 print(*sorted(sorted(set([x.rstrip() for x in [*open(0)][1:]])), key=len))
 
