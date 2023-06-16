@@ -1,4 +1,4 @@
-# boj 그리디 13305번 주유소
+# 그리디 / 실버 3 / 주유소
 
 
 n = int(input())
@@ -15,5 +15,4 @@ for i,v in enumerate(dis):
     if greed>next: 
         greed = next
 
-        
 print(ans)
