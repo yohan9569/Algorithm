@@ -1,4 +1,4 @@
-# boj 백준 백트래킹 14888번 연산자 끼워넣기
+# 백트래킹, 브루트포스 / 실버 1 / 연산자 끼워넣기
 
 
 from itertools import permutations as pm
