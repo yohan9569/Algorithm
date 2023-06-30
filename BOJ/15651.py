@@ -1,4 +1,4 @@
-# boj 백준 백트래킹 15651번 N과 M (3)
+# 백트래킹 / 실버 3 / N과 M (3)
 
 
 from itertools import product as pr
