@@ -1,4 +1,4 @@
-# boj 백준 백트래킹 15652번 N과 M (4)
+# 백트래킹 / 실버 3 / N과 M (4)
 
 
 from itertools import combinations_with_replacement as cr
