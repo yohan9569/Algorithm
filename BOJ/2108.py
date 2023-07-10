@@ -1,4 +1,6 @@
-# boj 백준 정렬 2108번 통계학
+# 정렬 / 실버 3 / 통계학
+
+
 import sys
 from collections import Counter
 
