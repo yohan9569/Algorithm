@@ -1,4 +1,4 @@
-# boj 2525번 오븐 시계
+# 수학 / 브론즈 3 / 오븐 시계
 
 a,b = map(int, input().split())
 c = int(input())
