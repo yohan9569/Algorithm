@@ -1,4 +1,5 @@
-# boj 백준 수학 2775번 부녀회장이 될테야
+# 수학 / 브론즈 1 / 부녀회장이 될테야
+
 
 for _ in range(int(input())):
     k = int(input())
