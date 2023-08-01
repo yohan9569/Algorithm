@@ -1,4 +1,5 @@
-# 2798번. 블랙잭
+# 브루트포스 / 브론즈 2 / 블랙잭
+
 
 n, m = map(int, input().split())
 cards=[int(i) for i in input().split()]
