@@ -1,4 +1,5 @@
-# 2884번 알람 시계
+# 수학 / 브론즈 3 / 알람 시계
+
 
 h,m=map(int,input().split())
 x,y=divmod(60*h+m-45, 60)
