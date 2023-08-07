@@ -1,4 +1,5 @@
-# boj 백준 수학2 3009	 네 번째 점
+# 구현 / 브론즈 3 / 네 번째 점
+
 
 from collections import Counter
 
