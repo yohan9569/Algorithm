@@ -1,4 +1,5 @@
-# boj 백준 3053번	 택시 기하학
+# 수학 / 브론즈 3 / 택시 기하학
+
 
 from math import pi
 
