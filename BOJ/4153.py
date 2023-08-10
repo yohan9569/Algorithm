@@ -1,4 +1,5 @@
-# boj 백준 수학2 4153번 직각삼각형
+# 수학 / 브론즈 3 / 직각삼각형
+
 
 while True:
     s = list(map(int,input().split()))
