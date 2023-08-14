@@ -1,4 +1,6 @@
-# 5622번 다이얼
+# 구현 / 브론즈 2 / 다이얼
+
+
 apb = list('abcdefghijklmnopqrstuvwxyz'.upper())
 d = dict()
 n = 3
