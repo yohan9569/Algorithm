@@ -1,7 +1,8 @@
-# 7568번 덩치
+# 브루트포스 / 실버 5 / 덩치
 
-xy=[]
-ans=[]
+
+xy = []
+ans = []
 
 for _ in range(int(input())):
     xy.append(tuple(int(i) for i in input().split()))
