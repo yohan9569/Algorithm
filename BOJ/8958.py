@@ -1,4 +1,5 @@
-# 8958번
+# 구현 / 브론즈 2 / OX퀴즈
+
 
 for _ in range(int(input())):
     
