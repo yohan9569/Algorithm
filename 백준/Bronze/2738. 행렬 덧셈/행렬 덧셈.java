@@ -1,30 +1,18 @@
-import java.util.Scanner;
-
-class Main {
-    public static void main(String[] args) {
-        var sc = new Scanner(System.in);
-        int n = sc.nextInt(), m = sc.nextInt();
-        
-        //creating matrices
-        int a[][] = new int[n][m], b[][] = new int[n][m], c[][] = new int[n][m];
-        for (int i=0; i<n; i++) {
-            for (int j=0; j<m; j++) {
-                a[i][j] = sc.nextInt();
-            }
-        }
-        for (int i=0; i<n; i++) {
-            for (int j=0; j<m; j++) {
-                b[i][j] = sc.nextInt();
-            }
-        }
-        
-        //adding and printing addition of 2 matrices
-        for (int i=0; i<n; i++) {
-            for (int j=0; j<m; j++) {
-                c[i][j] = a[i][j] + b[i][j];
-                System.out.print(c[i][j] + " ");
-            }
-            System.out.println();
-        }
-    }
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		var s=new Scanner(System.in);
+		int n=s.nextInt(),m=s.nextInt();
+		int arr[][]=new int[n][m];
+		for(int k=0;k<2;k++)
+			for(int i=0;i<n;i++) {
+				for(int j=0;j<m;j++) {
+					arr[i][j]+=s.nextInt();
+					if (k==1)
+    					System.out.print(arr[i][j]+" ");
+				}
+    			if (k==1)
+    			    System.out.println();
+		    }
+	}
 }
