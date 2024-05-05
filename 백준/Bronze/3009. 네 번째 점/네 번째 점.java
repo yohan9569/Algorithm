@@ -3,7 +3,7 @@ import java.util.*;
 public class Main {
 	public static void main(String[] args) {
 		var sc = new Scanner(System.in);
-        List<Integer> a = new ArrayList<>(), b = new ArrayList<>();
+        	List<Integer> a = new ArrayList<>(), b = new ArrayList<>();
         
 		for (int i=0; i<3; i++) {
 		    int c = sc.nextInt(), d = sc.nextInt();
