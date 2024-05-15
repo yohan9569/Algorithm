@@ -1,21 +1,24 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt(), M = sc.nextInt(), cnt = 0;
-        int[] arr = new int[N];
-        
+        int N = sc.nextInt(), M = sc.nextInt(), cnt = 0, arr[] = new int[N];
+
         for (int i=0; i<N; i++) {
         	arr[i] = sc.nextInt();
         }
-        
-        for (int j=0; j<N-1; j++) {
-        	for (int k=j+1; k<N; k++) {
-        		if (arr[j] + arr[k] == M) cnt++;
-        	}
+        Arrays.sort(arr);
+
+        int i = 0, j = N-1;
+        while (i<j) {
+		        if (arr[i] + arr[j] < M) i++;
+		        else if (arr[i] + arr[j] > M) j--;
+		        else {
+				        cnt++; i++; j--;
+		        }
         }
-        
-        System.out.println(cnt);
+
+        System.out.print(cnt);
     }
 }
