@@ -13,6 +13,6 @@ public class Main {
         	q.add(q.poll());
         }
 
-        for (int e : q) System.out.print(e + " ");
+        System.out.print(q.poll());
     }
 }
