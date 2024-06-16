@@ -28,10 +28,8 @@ class Main {
         // dfs
         int ans = 0;
         for (int i=0; i<n; i++) {
-            if (!visited[i]) {
-                ans = DFS(i, 1);
-                if (ans==1) break;
-            }
+            ans = DFS(i, 1);
+            if (ans==1) break;
         }
         
         System.out.println(ans);
