@@ -1,0 +1,1 @@
+print(*sorted(sorted(set([x.rstrip() for x in [*open(0)][1:]])), key=len))
