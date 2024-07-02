@@ -11,8 +11,7 @@ public class Main {
 
     int cnt = 0;
     while (k > 0) {
-      n--;
-      if (k >= a[n]) {
+      if (k >= a[--n]) {
         cnt += k / a[n];
         k %= a[n];
       }
