@@ -20,23 +20,25 @@ public class Main {
       length /= 2;
       treeHeight++;
     }
-    int treeSize = (int) Math.pow(2, treeHeight + 1);
-    int leftNodeStartIndex = treeSize / 2 - 1;
+    int treeSize = (int) Math.pow(2, treeHeight + 1); // 2의 k승 * 2
+    int leafNodeStartIndex = treeSize / 2 - 1;
     tree = new long[treeSize + 1];
     // 데이터를 리프 노드에 입력받기
-    for (int i = leftNodeStartIndex + 1; i <= leftNodeStartIndex + N; i++)
+    for (int i = leafNodeStartIndex + 1; i <= leafNodeStartIndex + N; i++)
       tree[i] = Long.parseLong(br.readLine());
+    // 부모 채워주기
     setTree(treeSize - 1);
+
     for (int i = 0; i < M + K; i++) {
       st = new StringTokenizer(br.readLine());
       long a = Integer.parseInt(st.nextToken());
       int s = Integer.parseInt(st.nextToken());
       long e = Long.parseLong(st.nextToken());
-      if (a == 1) {
-        changeVal(leftNodeStartIndex + s, e);
-      } else if (a == 2) {
-        s += leftNodeStartIndex;
-        e += leftNodeStartIndex;
+      if (a == 1) { // 업데이트
+        changeVal(leafNodeStartIndex + s, e);
+      } else if (a == 2) { // 구간합
+        s += leafNodeStartIndex;
+        e += leafNodeStartIndex;
         System.out.println(getSum(s, (int) e));
       } else {
         return;
