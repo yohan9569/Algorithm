@@ -1,27 +1,28 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
-    static Map<Integer, int[]> dict = new HashMap<Integer, int[]>() {{
-        put(0, new int[] {10});
-        put(1, new int[] {1});
-        put(2, new int[] {6, 2, 4, 8});
-        put(3, new int[] {1, 3, 9, 7});
-        put(4, new int[] {6, 4});
-        put(5, new int[] {5});
-        put(6, new int[] {6});
-        put(7, new int[] {1, 7, 9, 3});
-        put(8, new int[] {6, 8, 4, 2});
-        put(9, new int[] {1, 9});
-    }};
-    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
+        int[] twoNums = {6, 2, 4, 8}, threeNums = {1, 3, 9, 7}, sevenNums = {1, 7, 9, 3}, eightNums = {6, 8, 4, 2};
         
         for (int i=0; i<T; i++) {
-            int a = sc.nextInt() % 10, b = sc.nextInt();
-            int[] curDict = dict.get(a);
-            int ans = curDict[b % curDict.length];
+            int a = sc.nextInt() % 10, b = sc.nextInt(), ans = a;
+            switch (a) {
+                case 0: ans = 10;
+                    break;
+                case 1: case 5: case 6: ans = a;
+                    break;
+                case 4: case 9:
+                    ans = (b%2==0) ? (a*a) % 10 : a;
+                    break;
+                case 2: case 8:
+                    ans = (a == 2 ? twoNums : eightNums)[b%4];
+                    break;
+                case 3: case 7:
+                    ans = (a == 3 ? threeNums : sevenNums)[b%4];
+                    break;
+            }
             System.out.println(ans);
         }
     }
